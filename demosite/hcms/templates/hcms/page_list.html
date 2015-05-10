@@ -1,9 +1,9 @@
-{% extends "treepages/base.html" %}
+{% extends "hcms/base.html" %}
 
 {% block content %}
 <h2>Publishers</h2>
 <ul>
-{% for page in object_list %}
+{% for page in page_list %}
 <li>{{ page.url }} (rename)(delete)</li>
 {% endfor %}
 </ul>

@@ -16,9 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from treepages import urls as treepages_urls
+from hcms import urls as treepages_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^treepages/', include(treepages_urls)),
+    url(r'^hcms/', include(treepages_urls)),
 ]

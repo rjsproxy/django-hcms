@@ -1,0 +1,15 @@
+{% extends "hcms/base.html" %}
+
+{% block content %}
+<h2>HCMS Text</h2>
+<ul>
+{% for text in text_list %}
+<li>
+    {{ text.text }}  
+    <a href="update/{{ text.id }}">[UPDATE]</a>
+    <a href="delete/{{ text.id }}">[DELETE]</a>
+</li>
+{% endfor %}
+<li><a href="create/">[CREATE]</a></li>
+</ul>
+{% endblock %}

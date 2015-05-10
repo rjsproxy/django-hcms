@@ -1,0 +1,11 @@
+{% extends "hcms/base.html" %}
+
+{% block content %}
+<h2>HCMS Text Confirm Delete</h2>
+<form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
+{% endblock %}
+
+

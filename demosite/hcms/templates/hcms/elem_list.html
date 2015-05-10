@@ -1,0 +1,18 @@
+{% extends "hcms/base.html" %}
+
+{% block content %}
+<h2>HCMS Elem List</h2>
+<ul>
+{% for elem in elem_list %}
+<li>
+    Tree {{ elem.tree_id }},
+    Element {{ elem.id }},
+    Depth {{ elem.level }},
+    Content <q>{{ elem.content.text }}</q>.
+    <!-- <a href="update/{{ elem.id }}">[UPDATE]</a> -->
+    <!-- <a href="delete/{{ elem.id }}">[DELETE]</a> -->
+</li>
+{% endfor %}
+<!-- <li><a href="create/">[CREATE]</a></li> -->
+</ul>
+{% endblock %}

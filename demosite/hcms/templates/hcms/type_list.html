@@ -1,0 +1,22 @@
+{% extends "hcms/base.html" %}
+{% load hcms_tags %}
+{% block content %}
+<h2>HCMS Type List</h2>
+{% for t in object_list %}
+{{ t.id }} |
+{{ t.app_label }} |
+{{ t.model }} |
+{{ t|verbose_name }} |
+{{ t|verbose_name_plural }} <br>
+{% endfor %}
+
+
+<select>
+<option value="0"></option>
+{% for t in object_list %}
+<option value="{{ t.id }}">{{ t|verbose_name }}</option>
+{% endfor %}
+</select>
+
+
+{% endblock %}

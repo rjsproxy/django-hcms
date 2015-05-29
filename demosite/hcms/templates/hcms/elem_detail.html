@@ -1,0 +1,12 @@
+{% extends "hcms/base.html" %}
+
+{% block content %}
+<h2>HCMS Elem Detail</h2>
+content_type: {{ elem.content_type }}<br>
+content_id: {{ elem.content_id }}<br>
+display_type: {{ elem.display_type }}<br>
+display_id: {{ elem.display_id }}<br>
+<br>
+render:<br>
+<pre>{{ elem.render }}</pre>
+{% endblock %}

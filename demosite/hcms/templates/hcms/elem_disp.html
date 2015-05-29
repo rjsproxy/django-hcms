@@ -1,0 +1,10 @@
+{% extends "hcms/base.html" %}
+{% load hcms_tags %}
+{% block content %}
+<h2>HCMS Elem Display</h2>
+<p>Rob, you're here. Starting point to start rendering trees.</p>
+<hr>
+{% for elem in elem_list %}
+{{ elem|render }}
+{% endfor %}
+{% endblock %}

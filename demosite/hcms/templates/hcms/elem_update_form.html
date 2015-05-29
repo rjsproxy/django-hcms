@@ -1,0 +1,8 @@
+{% extends "hcms/base.html" %}
+{% block content %}
+<h2>HCMS Text Update Form</h2>
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>
+{% endblock %}

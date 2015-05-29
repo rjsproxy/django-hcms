@@ -1,0 +1,16 @@
+{% extends "hcms/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<h2>HCMS</h2>
+<p>
+Current focus is to get element creation workflow going.
+</p>
+<ul>
+    <li><a href="elem">List of elements.</a></li>
+</ul>
+<div id="hcms">
+    <p>...Waiting for init...</p>
+</div>
+<script src="{% static "hcms/js/hcms.js" %}"></script>
+{% endblock %}

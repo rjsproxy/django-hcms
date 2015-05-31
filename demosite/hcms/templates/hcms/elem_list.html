@@ -2,17 +2,42 @@
 
 {% block content %}
 <h2>HCMS Elem List</h2>
-<ul>
+<table>
+<tr>
+    <td>tree_id</td>
+    <td>id</td>
+    <td>level</td>
+    <td>content_type</td>
+    <td>content_id</td>
+    <td>display_type</td>
+    <td>display_id</td>
+    <td>detail</td>
+    <td>update</td>
+    <td>delete</td>
+</tr>
 {% for elem in elem_list %}
-<li>
-    Tree {{ elem.tree_id }},
-    Element {{ elem.id }},
-    Depth {{ elem.level }},
-    Content <q>{{ elem.content.text }}</q>.
-    <!-- <a href="update/{{ elem.id }}">[UPDATE]</a> -->
-    <!-- <a href="delete/{{ elem.id }}">[DELETE]</a> -->
-</li>
+<tr>
+    <td>{{ elem.tree_id }}</td>
+    <td>{{ elem.id }}</td>
+    <td>{{ elem.level }}</td>
+    <td>{{ elem.content_type }}</td>
+    <td>{{ elem.content_id }}</td>
+    <td>{{ elem.display_type }}</td>
+    <td>{{ elem.display_id }}</td>
+    <td><a href="{{ elem.id }}">[DETAIL]</a></td>
+    <td><a href="update/{{ elem.id }}">[UPDATE]</a></td>
+    <td><a href="delete/{{ elem.id }}">[DELETE]</a></td>
+</tr>
 {% endfor %}
-<!-- <li><a href="create/">[CREATE]</a></li> -->
-</ul>
+    <td><a href="create/">[CREATE]</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</table>
 {% endblock %}
